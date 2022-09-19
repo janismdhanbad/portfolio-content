@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- All of the meta data for the page belongs in the header tag -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../images/bio-photo.jpg">
+	<link rel="stylesheet" href="../css/html5reset.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Personal Portfolio</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li class="active"><a href="../pages/projects.html">Projects</a></li>
+            <li><a href="../pages/blogs.html">Blogs</a></li>
+            <li><a href="../pages/readings.html">Interesting readings</a></li>
+		</ul>
+	</nav>
+    <main>
+        <p style="padding-top: 75px; font-size: larger; padding-bottom: 50px;">
+        I have an experience in building end-to-end computer vision systems. To that end, I have worked on 
+        projects involving digital asset management, indoor data scene understadning and pedestrain action recognition. Below is the list
+        of a few projects I've worked on:
+        </p>
+        <p class = "project_heading">
+            Pavement Digital asset management using Deep Learning at Atkins
+        </p>
+        <figure class ="project_image">
+			<img src="../images/pavement_defect_results.png" alt = "pavement-defect-results" width="500"/>
+			<figcaption>Image with Linear defects</figcaption>
+		</figure>
+        
+        <p class="project_desc">
+            Here, the target was to detect and recognize the type and severity of defect on top-view 
+            roadimages. For transforming input data to make it deep learning training ready, GDAL 
+            and shapely was used. The final solution consisted of classification of an input image 
+            into asphalt/concreteusing a ResNet-18(accuracy 88%) model followed by the detection and 
+            classification of type andseverity of the defects. For Asphalt, I used Mask-RCNN(accuracy 77%) 
+            to detect and classify thedefect type which was then input to a classification (ResNet-50 
+            accuracy 94%) network giving theseverity(low, medium, high) of cropped defective sections. 
+            For Concrete, I trained three end-to-end models for Joints, corner and center defects type 
+            and severity of that gave an accuracy ofabout 85% each. Each model used InceptionV3 as a 
+            feature extractor followed by fully connectedlayers giving type, location and severity of the 
+            defects. Apart from the core computer visionsolution, I also worked on post processing the 
+            distress information so that it can be used in anAtkins proprietary tool. The final outputs
+            were in the form of shapefiles which can be visualized inQGIS for analysis of pavements and 
+            decision making on them. This was awarded with Excellenceaward. (SE): keras, tensorflow, 
+            fastai GDAL, shapely, OpenCV, scikit-image, AWS
+         </p>
+
+         <p class="project_heading">
+            Intent estimation and activity recognition at Intvo:
+         </p>
+         <figure class ="project_image">
+			<img src="../images/pedestrian_behaviour_dataset.png" alt = "intent-estimation-detection" width="500" />
+			<figcaption>Training data for JAAD dataset</figcaption>
+		</figure>
+         <p class="project_desc">
+            In this project, my task was to develop a deep learning model for intent(of a person 
+            crossing theroad) estimation and an activity recognition model for pedestrians using 
+            JAAD and PIE dataset.The final solution was a two-stage model where the first stage 
+            was responsible for pedestrian detection and tracking using FairMOT model architecture 
+            followed by CNN+RNN based network to take input as a stream of frames and give the 
+            required intent and two activities namelyperson standing/walking and looking/not-looking 
+            at the ego vehicle. This two-stage model wasdeployed on Nvidia Xavier using TensorRT and 
+            achieved 10 FPS with an accuracy of ~80 percent.
+         </p>
+         <p class= "project_heading"> 
+            Aerial imagery feature extraction using image processing for Network Rail at Atkins:
+         </p>
+         <figure class ="project_image">
+			<img src="../images/loc_elevation_diff.JPG" alt = "differenced dtm across years" width="500" />
+			<figcaption>Differenced DTM across different years</figcaption>
+		</figure>
+         <p class="project_desc">
+            In this project, I extracted information from geo-tagged TIFF files by differencing the
+             Digital TerrainModel (DTM) of two years to find the land use change between these years.
+              This differenced file wast hen used to find any depression(<-1 m) occurring within 100 
+              metres of a land elevation(> 1 m) that can cause an accident on the nearby tracks. Blob 
+              detection used segment depression and elevation in the differenced TIFF along with k-means
+               clustering to remove the noise. Distance was calculated between these elevation and 
+               depression blobs and then thresholded for anything lying under 100m.The code was written
+                in PySpark on Databricks to enable distributed processing. Was awarded withThe 
+                Institute of Asset Management Innovation Award SE: Python, OpenCV, GDAL, PDAL, 
+                Databricks,Pyspark, Azure.
+         </p>
+         <p class="project_heading">
+            Lineside feature detection for Network Rail using RGB-D data(Atkins)
+         </p>
+         <figure class ="project_image">
+			<img src="../images/helicopter-borne-image.png" alt = "helicopter borne image" width="500" />
+			<figcaption>helicopter borne image</figcaption>
+		</figure>
+         <p class="project_desc">
+            This was an instance segmentation problem to detect and classify objects(gantries, cantilevers 
+            and ponds) from aerial imagery. The size of each image being huge(12500x12500) and 
+            resizing would meana loss of pixel information, I broke it down into sections of 
+            1024x1024. I also extracted a Digital Surface(DSM) at .2 m spatial resolution of these 
+            sections using inverse weighted distance method for interpolation on sliced LiDAR 
+            data and added it as a chanel to the RGB image. This tensor was used as an input to 
+            train a Mask-RCNN network. Also, due to the huge size of ponds some sections were completely 
+            covered with water so I detected coastline instead of water that made the training more 
+            sensible. SE:PDAL, GDAL, python, Keras, tensorflow, numpy, Azure
+         </p>
+    </main>
+	<footer id ="footer">
+		&copy; 2022
+	</footer>
+</body>

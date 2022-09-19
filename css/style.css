@@ -1,0 +1,166 @@
+/*Add padding and margin to space out the page.
+Make the font larger too.*/
+body{
+	margin:1%;
+	padding:1%;
+	font-size:150%;
+	background-color: aliceblue;
+}
+
+/*Make the h1 heading bigger with a bold font*/
+h1{
+	font-size: 2em; 
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+.active{
+	background: rgb(238, 143, 143);
+    text-transform: uppercase;
+	text-align: center;
+}
+a:link { text-decoration: none; }
+.active a{
+	text-decoration: none;;
+}
+.bio_para{
+	line-height: 1.5;
+	padding: 75px;
+	text-align: justify;
+}
+/*Style the images*/
+.project_image {
+	/* display: inline-block; */
+	text-align: center;
+	/* border: 1px dotted gray; */
+	margin: auto; 
+	justify-content: center;
+  }
+  .project_image img{
+	margin-top: 10px;
+  }
+  .project_image figcaption {
+	padding: 0;
+	position: relative;
+	/* margin-top: -20px; */
+
+  }
+
+a{
+	color: whitesmoke;
+}
+#footer {
+	position: relative;
+	margin-top: 400px;
+	/* negative value of footer height */
+	height: 20px;
+	clear: both;
+	background-color: black;
+	color: white;
+  }
+  
+/*Make the h2 heading match h1*/
+h2{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+/*Improve the spacing for paragraphs AND headings*/
+p, h1, h2 {
+    padding: 10px;
+}
+
+/*Add borders around the main components and some
+space too*/
+.profile_img{
+    height: 300px;
+	width:auto;
+    padding: 75px;
+
+
+}
+
+/*Change the styling for all of the list 
+items in the nav section*/
+nav li{
+	background-color: #8c3434;
+	padding:10px;
+	width:25%;
+	border:1px solid black;
+	display: inline-block;
+	width: 23.16%;
+	
+}
+
+/*Added this so the links stay the same color*/
+a:visited{color:#f2f2f7}
+
+.project_heading{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	background-color: #8c3434;
+	color: white;
+	font-size: 20pt;
+	margin-top: 25px;
+}
+.project_desc{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	text-align: justify;
+	padding-bottom: 50px;
+	line-height: 1.2;
+}
+.bolded { font-weight: bold; }
+.italics{font-style: italic;
+			font-size: 14pt;}
+.blog_head{
+	background-image: url("../images/books_bg.jpg");
+	margin-top: 10px;
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+	
+	/* width: 87.5%; */
+}
+
+
+
+
+.caption {
+	display: block;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 24px;
+	line-height: 1.5;
+
+	padding-top: 120px;
+	position: relative;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+
+  }
+
+.publication_list{
+	/* make bullet points red squares */
+	list-style:square ;
+	margin-left: 50px;
+  }
+
+.blog_body{
+	background-size: cover;
+	background-position: center;
+	height: 120px;
+	margin-top: 30px;
+	padding-top: 30px;
+	border-color: grey;
+	border-width: 1px;
+	border-style:solid;
+}
+
+
+
+
+.blog_body:hover {
+display: block;
+background-image: url("../images/polka_dots_bg.png");
+color: whitesmoke
+}
