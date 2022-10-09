@@ -7,6 +7,7 @@ body{
 	background-color: aliceblue;
 }
 
+
 /*Make the h1 heading bigger with a bold font*/
 h1{
 	font-size: 2em; 
@@ -20,31 +21,55 @@ h1{
     text-transform: uppercase;
 	text-align: center;
 }
+
 a:link { text-decoration: none; }
 .active a{
 	text-decoration: none;;
 }
+.profile_container{
+	display: grid;
+	margin-top: 50px;
+	grid-template-columns: 1.5fr 4fr ;
+	grid-template-rows: 350px;
+}
+.profile_container > div{
+	object-fit: cover;
+}
+.profile_img{
+	grid-row: 1 / -1;
+	grid-column: 1 / span 1;
+}
+.bio{
+	grid-row: 1 / -1;
+	grid-column: 2 / span 1;
+
+}
+.profile_img img{
+	width: 100%;
+	height:100%; 
+    object-fit: cover;
+
+}
+
+
 .bio_para{
 	line-height: 1.5;
-	padding: 75px;
 	text-align: justify;
+	
 }
 /*Style the images*/
 .project_image {
-	/* display: inline-block; */
 	text-align: center;
-	/* border: 1px dotted gray; */
 	margin: auto; 
 	justify-content: center;
+	border: black 2px solid;
+	height: auto;
+	width: 500px;
   }
-  .project_image img{
-	margin-top: 10px;
-  }
+
   .project_image figcaption {
 	padding: 0;
 	position: relative;
-	/* margin-top: -20px; */
-
   }
 
 a{
@@ -73,12 +98,19 @@ p, h1, h2 {
 
 /*Add borders around the main components and some
 space too*/
-.profile_img{
-    height: 300px;
-	width:auto;
-    padding: 75px;
 
+.page_start p{
+	padding-top: 75px; 
+	font-size: larger; 
+	padding-bottom: 50px;
+}
 
+.project{
+	min-height: 300px;
+	height: auto;
+	align-content: center;
+	border: black 1px solid;
+	margin-top: 40px;
 }
 
 /*Change the styling for all of the list 
@@ -100,14 +132,13 @@ a:visited{color:#f2f2f7}
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	background-color: #8c3434;
 	color: white;
-	font-size: 20pt;
-	margin-top: 25px;
+	font-size: 21pt;
+
 }
 .project_desc{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16pt;
 	text-align: justify;
-	padding-bottom: 50px;
 	line-height: 1.2;
 }
 .bolded { font-weight: bold; }
@@ -119,8 +150,6 @@ a:visited{color:#f2f2f7}
 	background-size: cover;
 	background-position: center;
 	height: 200px;
-	
-	/* width: 87.5%; */
 }
 
 
@@ -155,12 +184,37 @@ a:visited{color:#f2f2f7}
 	border-width: 1px;
 	border-style:solid;
 }
-
-
-
-
 .blog_body:hover {
-display: block;
-background-image: url("../images/polka_dots_bg.png");
-color: whitesmoke
+	display: block;
+	background-image: url("../images/polka_dots_bg.png");
+	color: whitesmoke
+	}
+
+.project_image:hover, .project_image:focus{
+	box-shadow: 10px 10px 5px gray;
+	}
+
+
+.move_to_top{
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	background-color: #8c3434;
+	width: 15%;
+	padding-left: 1%;
+	padding-right: 1%;
+	height: 45px;
+	text-align: center;
+	border-radius: 8px;
+	
+}
+.move_to_top:hover, move_to_top:focus{
+	background-color: rgb(238, 143, 143);
+}
+.move_to_top a{
+	color: white;
+	align-content: center;
+	font-size: 40px;
+
 }
