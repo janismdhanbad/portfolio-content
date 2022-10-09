@@ -15,17 +15,28 @@ h1{
 	text-align: center;
 	
 }
-
+.div_heads{
+	text-align:center; 
+	background-color: aqua;
+	margin-top: 20px;
+	margin-bottom: -40px;
+}
+.active a{
+	text-decoration: none;;
+}
+a:link { text-decoration: none; }
+a{
+	color: whitesmoke;
+}
 .active{
 	background: rgb(238, 143, 143);
     text-transform: uppercase;
 	text-align: center;
 }
-
-a:link { text-decoration: none; }
 .active a{
-	text-decoration: none;;
+	color: black;
 }
+
 .profile_container{
 	display: grid;
 	margin-top: 50px;
@@ -65,6 +76,7 @@ a:link { text-decoration: none; }
 	border: black 2px solid;
 	height: auto;
 	width: 500px;
+	padding: 1px;
   }
 
   .project_image figcaption {
@@ -72,9 +84,7 @@ a:link { text-decoration: none; }
 	position: relative;
   }
 
-a{
-	color: whitesmoke;
-}
+
 #footer {
 	position: relative;
 	margin-top: 400px;
@@ -126,7 +136,7 @@ nav li{
 }
 
 /*Added this so the links stay the same color*/
-a:visited{color:#f2f2f7}
+
 
 .project_heading{
 	font-family: Georgia, 'Times New Roman', Times, serif;
