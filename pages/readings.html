@@ -40,48 +40,45 @@
             <figcaption>perceiverIO architecture(<a href="https://arxiv.org/pdf/2107.14795.pdf" style="color: black; text-decoration: underline;">source</a>)</figcaption>
         </figure>
     </div>
-    <p >
+    
         <span class="bolded">
-            What does the paper do?
+            - What does the paper do?
         </span>
-    </br>
+    <p class='bio_para'>
         The authors here ask the question that "Is the development of problem-specific models for
          each new set of inputs and outputs unavoidable?" Along those lines, the authors have proposed
           a follow-up work, perceriverIO, that is able to give good results even on some complex task 
           of vision and language, as opposed to it previous counter-apart , perceriver.    
-    </br>
-    </br>
+    </p>
 
         <span class="bolded">
-        How to they do it?
+        - How to they do it?
         </span>
 
-    </br>
+    <p class='bio_para'>
         The overall model follows and encoder-decoder based architecture. The encoder here takes
-         input a bytearray of the input image, language, etc. and tries to map it to a latent vector, 
-         which is usually a lot less dimension that input vector. This latent vector is then passed 
-         through an attention block that follows similar query,key,value followed by point-wise MLP 
-         from Transformers. In decoder, the latent vector is mapped to the output vector using a query
-          vector(learnable). The dimensions of output are same as the query vector. This formulation 
-          encourages the arbitrary sized outputs and lets you have control over generated output using 
-          a query vector. The structure and formulation of queries here depends on what specific task 
-          is being performed.
-    </br>
-    </br>
+        input a bytearray of the input image, language, etc. and tries to map it to a latent vector, 
+        which is usually a lot less dimension that input vector. This latent vector is then passed 
+        through an attention block that follows similar query,key,value followed by point-wise MLP 
+        from Transformers. In decoder, the latent vector is mapped to the output vector using a query
+        vector(learnable). The dimensions of output are same as the query vector. This formulation 
+        encourages the arbitrary sized outputs and lets you have control over generated output using 
+        a query vector. The structure and formulation of queries here depends on what specific task 
+        is being performed.
+    </p>
     <span class="bolded">
-        Positive points of the paper
+        - Positive points of the paper
     </span>
-    </br>
+    <p class='bio_para'>
         The paper is a novel contribution to the problem of task specific models. It uses the 
         concept of projecting input space to a latent space, which makes this efficient for compute. 
         Also, the authors performed various experiments for tasks like image classification, optical 
         flow and other language tasks and found at par performance with various baselines.
-    </br>
-    </br>   
+    </p>  
     <span class="bolded">
-    Negative points of the paper
+        - Negative points of the paper
     </span>
-    </br>
+    <p class='bio_para'>
     The paper starts with making a general model that doesn't take the task specificity into account. 
     But, I think the task specificity is still getting embedded(and is manual up-to certain extent)
      while we form the latent and the query vector. Also, the model architecture has no way of 
@@ -102,25 +99,25 @@
     <figcaption>Teaser image for the paper(<a href="https://arxiv.org/pdf/2101.02692.pdf" style="color: black; text-decoration: underline;">source</a>)</figcaption>
 </figure>
 </div>
-<p >
+
     <span class="bolded">
-        What does the paper do?
+        - What does the paper do?
     </span>
-</br>
+
+<p class='bio_para'>
 The paper focuses around the idea of agent-environment interaction using visual perception. 
 We as humans are not only able to interact with objects like pulling a door, switching on, etc. 
 easily but also able to infer precisely how and where this interaction needs to take place.
  Taking motivation from this, given an image and its depth map, the authors predict a set of actions
  (like pulling, pulling-up, pulling-down, etc.) for each pixel, a gripper end-effector 
  3-DoF orientation in SO(3) space(proposed action) and a probability of success of this action.       
-</br>
-</br>
+</p>
 
     <span class="bolded">
-    How to they do it?
+    - How to they do it?
     </span>
 
-</br>
+<p class='bio_para'>
 The input here is an RGB image or a point cloud. The authors then use either a ResNet-18(for image) or 
 Pointnet++(for Point Cloud) network to extract the per pixel feature from the input. These features 
 are then passed through three 128-layered MLPs to get the final outputs required for interaction i.e., 
@@ -135,28 +132,30 @@ action per pixel, the proposed action the success of the action proposed. The fi
  Out of these, ten are used for training and rest 5 are used for testing. The authors use two 
  evaluations metrics. Firstly, they use F-score to predict the goodness of predicted actions. Secondly, 
  they define a ratio between the True Positive action proposals and the total number of proposals.
-</br>
-</br>
+</p>
+
 <span class="bolded">
-    Positive points of the paper
+    - Positive points of the paper
 </span>
-</br>
+
+<p class='bio_para'>
 Given the complexity of the task, the solution provided by the authors just uses off-the-shelf 
 feature extractors and MLPs, which is elegant. It is also one of the first papers performing such 
 fine-grained level task. The experiments are performed robustly, the authors test their algorithm 
 on unseen test data and perform ablation studies to prove their claim. 
-</br>
-</br>   
+</p>
+
 <span class="bolded">
-Negative points of the paper
+- Negative points of the paper
 </span>
-</br>
+
+<p class='bio_para'>
 The authors represent the world in a very simplistic manner, which are just 6 actions. Usually, 
 the actions are a lot more complicated. Also, some actions might require pushing with one hand and 
 pulling with other hand(for eg. rotating a table on its axis), there current model architecture might 
 not be able to handle that. Also, though this is a huge step in terms of agent-environment interaction,
  but far from a real scene as the authors used a simulation-based
- </p>
+</p>
 </div>
 <!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
 <div class="project">
@@ -169,11 +168,12 @@ not be able to handle that. Also, though this is a huge step in terms of agent-e
     <figcaption>CLIP model architecture(<a href="https://arxiv.org/pdf/2103.00020.pdf" style="color: black; text-decoration: underline;">source</a>)</figcaption>
 </figure>
 </div>
-<p >
+
     <span class="bolded">
-        What does the paper do?
+        - What does the paper do?
     </span>
-</br>
+
+<p class='bio_para'>
 Computer vision systems are built through training and prediction on a very specific kind of 
 dataset and consequently the task. Not only it is laborious to build these specific datasets for 
 specific tasks but also it limits model's generality and usability. The paper aims at solving this 
@@ -181,14 +181,13 @@ problem by doing a simple pre-training task of predicting which captions goes wi
 This allows them to learn State-of-the-art image representations in a scalable and efficient way. 
 The authors test this method by studying the performance of pre-trained model on 30 different existing
  Computer Vision tasks.       
-</br>
-</br>
+</p>
 
     <span class="bolded">
-    How to they do it?
+    - How to they do it?
     </span>
 
-</br>
+<p class='bio_para'>
 The paper derives its inspiration from two major ideas. First being a paper called VirTex and second 
 is the idea of contrastive learning. During training, image-text pairs are used as a supervising 
 signal. We take an image, pass it through an image encoder and project it on a linear sub space. 
@@ -199,23 +198,25 @@ the image, rather, they train using the similarity between the complete encoded 
 The inference here is done in a zero shot setting. During inference, a textual prompt is engineered 
 and the loss is computed between the encoded test image and the \textit{engineered prompt} to predict 
 the final class of the image.
-</br>
-</br>
+</p>
+
 <span class="bolded">
-    Positive points of the paper
+    - Positive points of the paper
 </span>
-</br>
+
+<p class='bio_para'>
 The paper introduces a simplistic yet elegant way of learning robust representations from a 
 large scale dataset. The experiment across 30 different datasets along with zero shot transfer 
 learning shows how transformers can learn representations across wide variety of tasks. The 
 thoroughness of the experiments proves that this method is highly transferable and gives us 
 representations that can handle distribution shift better than ImageNet models.
-</br>
-</br>   
+</p>
+
 <span class="bolded">
-Negative points of the paper
+- Negative points of the paper
 </span>
-</br>
+
+<p class='bio_para'>
 Though CLIP model gives us a way to train models in a datad ab task agnostic manner, but it 
 comes with a cost of a huge data requirement for pretraining task. The authors in the paper use 
 400 million images. The image encoders(ResNet like) takes took 18 days to train on 592 V100 GPUs 
