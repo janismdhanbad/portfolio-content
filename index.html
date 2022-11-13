@@ -24,7 +24,7 @@
 	<main>
         <div class = "profile_container">
             <div class = "profile_img">
-                <img alt="profile picture" src="./images/bio-photo.jpg">
+                <img alt="profile picture" src="./images/final_bio_photo.gif" id="img1"/>
             </div>
             <div class="bio">
                 <p class='bio_para'>
@@ -61,5 +61,13 @@
 	<footer id ="footer">
 		&copy; 2022
 	</footer>
+    <script>
+
+setTimeout(function() {
+    setInterval(function() {
+        $('#img1').attr('src',$('#img1').attr('src'))
+    },1)
+}, 6000)
+    </script>
 </body>
 </html>
