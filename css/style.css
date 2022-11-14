@@ -193,8 +193,9 @@ header{
 	justify-content: center;
 	border: black 2px solid;
 	height: auto;
-	width: 40%;
+	width: 55%;
 	padding: 1px;
+	object-fit: cover;
   }
 
 .project_image figcaption {
