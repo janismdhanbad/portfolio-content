@@ -1,14 +1,11 @@
-/*Add padding and margin to space out the page.
-Make the font larger too.*/
+ /******************************** Global settings across all the pages ***************************/
 body{
 	margin:1%;
 	padding:1%;
 	font-size:150%;
 	background-color: aliceblue;
+	font-family: 'Roboto', sans-serif;
 }
-
-
-/*Make the h1 heading bigger with a bold font*/
 h1{
 	font-size: 2em; 
 	font-weight: bold;
@@ -36,54 +33,13 @@ a{
 .active a{
 	color: black;
 }
-
-.profile_container{
-	display: grid;
-	margin-top: 50px;
-	grid-template-columns: 1.5fr 4fr ;
-	grid-template-rows: 350px;
+h2{
+	font-size: 2em; 
+	font-weight: bold;
 }
-.profile_container > div{
-	object-fit: cover;
+p, h1, h2 {
+    padding: 10px;
 }
-.profile_img{
-	grid-row: 1 / -1;
-	grid-column: 1 / span 1;
-}
-.bio{
-	grid-row: 1 / -1;
-	grid-column: 2 / span 1;
-
-}
-.profile_img img{
-	width: 100%;
-	height:100%; 
-    object-fit: cover;
-
-}
-
-
-.bio_para{
-	line-height: 1.5;
-	text-align: justify;
-	
-}
-/*Style the images*/
-.project_image {
-	text-align: center;
-	margin: auto; 
-	justify-content: center;
-	border: black 2px solid;
-	height: auto;
-	width: 500px;
-	padding: 1px;
-  }
-
-  .project_image figcaption {
-	padding: 0;
-	position: relative;
-  }
-
 
 #footer {
 	position: relative;
@@ -94,139 +50,94 @@ a{
 	background-color: black;
 	color: white;
   }
-  
-/*Make the h2 heading match h1*/
-h2{
-	font-size: 2em; 
-	font-weight: bold;
-}
-
-/*Improve the spacing for paragraphs AND headings*/
-p, h1, h2 {
-    padding: 10px;
-}
-
-/*Add borders around the main components and some
-space too*/
-
 .page_start p{
 	padding-top: 75px; 
 	font-size: larger; 
 	padding-bottom: 50px;
 }
-
-.project{
-	min-height: 300px;
-	height: auto;
-	align-content: center;
-	border: black 1px solid;
-	margin-top: 40px;
-}
-
-/*Change the styling for all of the list 
-items in the nav section*/
 nav li{
 	background-color: #8c3434;
 	padding:10px;
-	width:25%;
 	border:1px solid black;
-	display: inline-block;
-	width: 23.16%;
-	
-}
-
-/*Added this so the links stay the same color*/
-
-
-.project_heading{
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	background-color: #8c3434;
-	color: white;
-	font-size: 21pt;
-
-}
-.project_desc{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16pt;
-	text-align: justify;
-	line-height: 1.2;
+	display: list-item;
+	width: 100%;
 }
 .bolded { font-weight: bold; }
 .italics{font-style: italic;
 			font-size: 14pt;}
-.blog_head{
-	background-image: url("../images/books_bg.jpg");
-	margin-top: 10px;
-	background-size: cover;
-	background-position: center;
-	height: 200px;
-}
 
-
-
-
-.caption {
-	display: block;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-size: 24px;
-	line-height: 1.5;
-
-	padding-top: 120px;
-	position: relative;
-	color: white;
-	background-color: rgba(0, 0, 0, 0.5);
-
-  }
-
-.publication_list{
-	/* make bullet points red squares */
-	list-style:square ;
-	margin-left: 50px;
-  }
-
-.blog_body{
-	background-size: cover;
-	background-position: center;
-	height: 120px;
-	margin-top: 30px;
-	padding-top: 30px;
-	border-color: grey;
-	border-width: 1px;
-	border-style:solid;
-}
-.blog_body:hover {
-	display: block;
-	background-image: url("../images/polka_dots_bg.png");
-	color: whitesmoke
-	}
-
-.project_image:hover, .project_image:focus{
-	box-shadow: 10px 10px 5px gray;
-	}
-
-
-.move_to_top{
-	margin-top: 90px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	background-color: #8c3434;
-	width: 15%;
-	padding-left: 1%;
-	padding-right: 1%;
-	height: 45px;
+header{
 	text-align: center;
-	border-radius: 8px;
+}
+/* *********************************************************************************************** */
+/* ************************************* Main page settings************************************** */
+.index_body{
+	display: grid;
+	row-gap: 50px;
 	
-}
-.move_to_top:hover, move_to_top:focus{
-	background-color: rgb(238, 143, 143);
-}
-.move_to_top a{
-	color: white;
-	align-content: center;
-	font-size: 40px;
 
+}
+.index_body > header{
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+	align-items: center;
+    justify-content: center;
+
+}
+.index_body > main{
+	grid-column: 1 / -1;
+	grid-row: 2 / 10;
+
+}
+.index_body > footer{
+	grid-column: 1 / -1;
+
+}
+
+.profile_container{
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 2 / 11;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: subgrid;
+	row-gap: 10px;
+
+}
+.profile_img{
+	grid-row: 1 / span 2;
+	grid-column: 2 / span 1;
+}
+.social_info{
+	grid-row: 3 / span 1;
+	grid-column: 2 / span 1;
+	text-align: center;
+}
+.social_info a{
+	color: inherit;
+}
+
+.bio{
+	grid-row: 5 / span 3;
+	grid-column: 1 / -1;
+
+
+}
+
+.profile_img img{
+	width: 100%;
+	height:100%; 
+    object-fit: cover;
+	border-radius: 50%;
+
+}
+.publications{
+	grid-row: 8 / span 2;
+	grid-column: 1 /-1;
+}
+.bio_para{
+	line-height: 1.5;
+	text-align: justify;
+	
 }
 @keyframes vibrate {
 	0% { transform: rotate(0deg); }
@@ -245,4 +156,261 @@ nav li{
 	animation: vibrate 0.5s;
 	animation-iteration-count: 13.5;
 	
+	
+}
+.publication_list{
+	/* make bullet points red squares */
+	list-style:square ;
+	margin-left: 50px;
+  }
+
+/* *********************************************************************************************** */
+/* ************************************* Project/Gallery page settings**************************** */
+.industry_projects{
+	display: flex;
+	flex-direction: column;
+}
+.project_body{
+	display: grid;
+	row-gap: 50px;
+	grid-template-columns: 1fr;
+}
+.project_body > header{
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+	
+
+}
+.project_body > main{
+	grid-column: 1 / -1;
+}
+.project_body > footer{
+	grid-column: 1 / -1;
+}
+.project_image {
+	text-align: center;
+	margin: auto; 
+	justify-content: center;
+	border: black 2px solid;
+	height: auto;
+	width: 500px;
+	padding: 1px;
+  }
+
+.project_image figcaption {
+padding: 0;
+position: relative;
+}
+
+.project{
+	min-height: 300px;
+	height: auto;
+	align-content: center;
+	border: black 1px solid;
+	margin-top: 40px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.project_heading{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	background-color: #8c3434;
+	color: white;
+	font-size: 21pt;
+
+}
+.project_desc{
+	/* font-family: Arial, Helvetica, sans-serif; */
+	font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	text-align: justify;
+	line-height: 1.2;
+}
+.project_image:hover, .project_image:focus{
+	box-shadow: 10px 10px 5px gray;
+	}
+
+.move_to_top{
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	background-color: #8c3434;
+	width: 25%;
+	padding-left: 1%;
+	padding-right: 1%;
+	height: 35px;
+	text-align: center;
+	border-radius: 8px;
+	
+}
+.move_to_top:hover, move_to_top:focus{
+	background-color: rgb(238, 143, 143);
+}
+.move_to_top a{
+	color: white;
+	align-content: center;
+	font-size: 18px;
+
+}
+/* *********************************************************************************************** */
+/* ************************************* Blog page settings*************************************** */
+
+
+.body_blog{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: ;
+}
+.body_blog > header{
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+}
+.body_blog > main{
+	grid-column: 1 / -1;
+}
+.body_blog > footer{
+	grid-column: 1 / -1;
+
+}
+.blog_list{
+	display: grid;
+	grid-column: 1 / -1;
+	/* grid-row: 2 / 11; */
+	grid-template-columns: 1fr;
+	grid-template-rows: subgrid;
+	row-gap: 10px;
+
+}
+.blog_bg{
+	height: 300px;
+	margin-top: 10px;
+	width: 100%;
+	background-image: url("../images/blog.png");
+	background-size: cover;
+	border-radius: 10px;
+	grid-row: 1 / span 1;
+}
+
+
+.blog_body{
+	background-size: cover;
+	background-position: center;
+	/* height: 120px; */
+	margin-top: 30px;
+	padding-top: 30px;
+	border-color: grey;
+	border-width: 1px;
+	border-style:solid;
+	border-radius: 15px;
+}
+.blog_body:hover {
+
+	box-shadow: 10px 10px 5px gray;
+	background-color: black;
+	color: whitesmoke;
+	font-size: 30px;
+	
+	}
+
+/* *********************************************************************************************** */
+/* ************************************* My Reads page settings*************************************** */
+.body_reads{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: ;
+}
+.body_reads > header{
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+}
+.body_reads > main{
+	grid-column: 1 / -1;
+}
+.body_reads > footer{
+	grid-column: 1 / -1;
+
+}
+/* *********************************************************************************************** */
+/* ************************************* Media queries settings*********************************** */
+@media all and (min-width: 600px){
+	nav li{
+		background-color: #8c3434;
+		padding:10px;
+		border:1px solid black;
+		display:inline-block;
+		width: 20.16%;
+	}	
+
+}
+@media all and (min-width: 900px){
+	nav li{
+		background-color: #8c3434;
+		padding:10px;
+		border:1px solid black;
+		display:inline-block;
+		width: 20.16%;
+	}	
+	.move_to_top{
+		margin-top: 90px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		background-color: #8c3434;
+		width: 15%;
+		padding-left: 1%;
+		padding-right: 1%;
+		height: 50px;
+		text-align: center;
+		border-radius: 8px;
+		
+	}
+	.move_to_top a{
+		color: white;
+		align-content: center;
+		font-size: 25px;
+	
+	}
+
+}
+
+@media all and (min-width: 3200px){
+	nav li{
+		background-color: #8c3434;
+		padding:10px;
+		border:1px solid black;
+		display:inline-block;
+		width: 20.16%;
+	}	
+	.industry_projects{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.move_to_top{
+		margin-top: 90px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		background-color: #8c3434;
+		width: 15%;
+		padding-left: 1%;
+		padding-right: 1%;
+		height: 45px;
+		text-align: center;
+		border-radius: 8px;
+		
+	}	
+	.move_to_top a{
+		color: white;
+		align-content: center;
+		font-size: 40px;
+	
+	}
+}
+@media (prefers-reduced-motion) {
+	.profile_img{
+		animation:none;
+	}
+
 }
