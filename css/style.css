@@ -17,6 +17,7 @@ h1{
 	background-color: aqua;
 	margin-top: 20px;
 	margin-bottom: -40px;
+	color: black;
 }
 .active a{
 	text-decoration: none;;
@@ -323,7 +324,7 @@ position: relative;
 .body_reads{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: ;
+	/* grid-template-rows: ; */
 }
 .body_reads > header{
 	grid-column: 1 / -1;
