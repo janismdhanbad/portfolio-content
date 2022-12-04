@@ -14,6 +14,7 @@
 	<title>Personal Portfolio</title>
 </head>
 <body class="project_body">
+   <div class="skip"><a href="#main">Skip to Main Content</a></div>
    <header id ="header">
       <nav>
          <ul>
@@ -34,7 +35,7 @@
       <h1 class="div_heads">
          Industry Projects
       </h1>
-      <div class="industry_projects">
+      <div class="all_projects">
          
          <div class="project">
             <p class = "project_heading">
@@ -47,7 +48,7 @@
                </figure>
             </div>
 
-            <p class="project_desc">
+            <p class="project_desc" id="proj1">
                Here, the target was to detect and recognize the type and severity of defect on top-view 
                roadimages. For transforming input data to make it deep learning training ready, GDAL 
                and shapely was used. The final solution consisted of classification of an input image 
@@ -64,6 +65,7 @@
                decision making on them. This was awarded with Excellenceaward. (SE): keras, tensorflow, 
                fastai GDAL, shapely, OpenCV, scikit-image, AWS
             </p>
+            <button class= "read_more" id="more1">Read More..</button>
          </div>
          <div class = "project">
             <p class="project_heading">
@@ -75,7 +77,7 @@
                   <figcaption>Training data for JAAD dataset</figcaption>
                </figure>
             </div>
-            <p class="project_desc">
+            <p class="project_desc" id="proj2">
                In this project, my task was to develop a deep learning model for intent(of a person 
                crossing theroad) estimation and an activity recognition model for pedestrians using 
                JAAD and PIE dataset.The final solution was a two-stage model where the first stage 
@@ -85,6 +87,7 @@
                at the ego vehicle. This two-stage model wasdeployed on Nvidia Xavier using TensorRT and 
                achieved 10 FPS with an accuracy of ~80 percent.
             </p>
+            <button class= "read_more" id="more2">Read More..</button>
          </div>
          <div class = "project">
             <p class= "project_heading"> 
@@ -96,7 +99,7 @@
                   <figcaption>Differenced DTM across different years</figcaption>
                </figure>
             </div>
-            <p class="project_desc">
+            <p class="project_desc" id="proj3">
                In this project, I extracted information from geo-tagged TIFF files by differencing the
                Digital TerrainModel (DTM) of two years to find the land use change between these years.
                This differenced file wast hen used to find any depression(1 m) occurring within 100 
@@ -108,6 +111,7 @@
                Institute of Asset Management Innovation Award SE: Python, OpenCV, GDAL, PDAL, 
                Databricks,Pyspark, Azure.
             </p>
+            <button class= "read_more" id="more3">Read More..</button>
          </div>
 
          <div class="project">
@@ -131,6 +135,7 @@
                covered with water so I detected coastline instead of water that made the training more 
                sensible. SE:PDAL, GDAL, python, Keras, tensorflow, numpy, Azure
             </p>
+            <button class= "read_more" id="more4">Read More..</button>
          </div>
       </div>
    <div class="move_to_top">
@@ -140,6 +145,7 @@
       
       </a>
       </div>
+      <script src="../js/main_file.js"></script>
     </main>
 	<footer id ="footer">
 		&copy; 2022

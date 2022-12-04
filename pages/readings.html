@@ -14,6 +14,7 @@
 	<title>Personal Portfolio</title>
 </head>
 <body class="body_reads">
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header id="header">
         <nav>
             <ul>
@@ -34,276 +35,288 @@
 
     <h1 class="div_heads">Research Papers</h1>
 
+ <div class="all_projects">
     <div class="project">
-    <p class = "project_heading">
-        Perceiver IO: A general architecture for structured inputs & outputs
-    </p>
-    <div class = "project_image">
-        <figure>
-            <img src="../images/perceiver.png" alt = "Perceiver IO architecture" width="500">
-            <figcaption>perceiverIO architecture(<a href="https://arxiv.org/pdf/2107.14795.pdf" aria-label="src_1" style="color: black; text-decoration: underline;">source</a>)</figcaption>
-        </figure>
-    </div>
-    
-        <span class="bolded">
-            - What does the paper do?
-        </span>
-    <p class='bio_para'>
-        The authors here ask the question that "Is the development of problem-specific models for
-         each new set of inputs and outputs unavoidable?" Along those lines, the authors have proposed
-          a follow-up work, perceriverIO, that is able to give good results even on some complex task 
-          of vision and language, as opposed to it previous counter-apart , perceriver.    
-    </p>
+        <p class = "project_heading">
+            Perceiver IO: A general architecture for structured inputs & outputs
+        </p>
+        <div class = "project_image">
+            <figure>
+                <img src="../images/perceiver.png" alt = "Perceiver IO architecture" width="500">
+                <figcaption>perceiverIO architecture(<a href="https://arxiv.org/pdf/2107.14795.pdf" aria-label="src_1" style="color: black; text-decoration: underline;">source</a>)</figcaption>
+            </figure>
+        </div>
+        <div class="paper_desc" id="proj1">
+            <span class="bolded">
+                - What does the paper do?
+            </span>
+            <p class='bio_para'>
+                The authors here ask the question that "Is the development of problem-specific models for
+                each new set of inputs and outputs unavoidable?" Along those lines, the authors have proposed
+                a follow-up work, perceriverIO, that is able to give good results even on some complex task 
+                of vision and language, as opposed to it previous counter-apart , perceriver.    
+            </p>
 
-        <span class="bolded">
-        - How to they do it?
-        </span>
+            <span class="bolded">
+                - How to they do it?
+            </span>
 
-    <p class='bio_para'>
-        The overall model follows and encoder-decoder based architecture. The encoder here takes
-        input a bytearray of the input image, language, etc. and tries to map it to a latent vector, 
-        which is usually a lot less dimension that input vector. This latent vector is then passed 
-        through an attention block that follows similar query,key,value followed by point-wise MLP 
-        from Transformers. In decoder, the latent vector is mapped to the output vector using a query
-        vector(learnable). The dimensions of output are same as the query vector. This formulation 
-        encourages the arbitrary sized outputs and lets you have control over generated output using 
-        a query vector. The structure and formulation of queries here depends on what specific task 
-        is being performed.
-    </p>
-    <span class="bolded">
-        - Positive points of the paper
-    </span>
-    <p class='bio_para'>
-        The paper is a novel contribution to the problem of task specific models. It uses the 
-        concept of projecting input space to a latent space, which makes this efficient for compute. 
-        Also, the authors performed various experiments for tasks like image classification, optical 
-        flow and other language tasks and found at par performance with various baselines.
-    </p>  
-    <span class="bolded">
-        - Negative points of the paper
-    </span>
-    <p class='bio_para'>
-    The paper starts with making a general model that doesn't take the task specificity into account. 
-    But, I think the task specificity is still getting embedded(and is manual up-to certain extent)
-     while we form the latent and the query vector. Also, the model architecture has no way of 
-     interpretting results, which could mean that the model learnt something for specific datasets.
-      I think more robust experimentation with different sorts of data would have been nice to see that.
-     </p>
+            <p class='bio_para'>
+                The overall model follows and encoder-decoder based architecture. The encoder here takes
+                input a bytearray of the input image, language, etc. and tries to map it to a latent vector, 
+                which is usually a lot less dimension that input vector. This latent vector is then passed 
+                through an attention block that follows similar query,key,value followed by point-wise MLP 
+                from Transformers. In decoder, the latent vector is mapped to the output vector using a query
+                vector(learnable). The dimensions of output are same as the query vector. This formulation 
+                encourages the arbitrary sized outputs and lets you have control over generated output using 
+                a query vector. The structure and formulation of queries here depends on what specific task 
+                is being performed.
+            </p>
+            <span class="bolded">
+                - Positive points of the paper
+            </span>
+            <p class='bio_para'>
+                The paper is a novel contribution to the problem of task specific models. It uses the 
+                concept of projecting input space to a latent space, which makes this efficient for compute. 
+                Also, the authors performed various experiments for tasks like image classification, optical 
+                flow and other language tasks and found at par performance with various baselines.
+            </p>  
+            <span class="bolded">
+                - Negative points of the paper
+            </span>
+            <p class='bio_para'>
+            The paper starts with making a general model that doesn't take the task specificity into account. 
+            But, I think the task specificity is still getting embedded(and is manual up-to certain extent)
+            while we form the latent and the query vector. Also, the model architecture has no way of 
+            interpretting results, which could mean that the model learnt something for specific datasets.
+            I think more robust experimentation with different sorts of data would have been nice to see that.
+            </p>
+        </div>
+        <button class= "read_more" id="more1">Read More..</button>
     </div>
         
 <!-- ***************************************************************************************************************************************** -->
-    
-<div class="project">
-<p class = "project_heading">
-    Where2Act: From Pixels to Actions for Articulated 3D Objects
-</p>
-<div class = "project_image">
-<figure>
-    <img src="../images/where2act.png" alt = "Teaser image for where2act" width="500">
-    <figcaption>Teaser image for the paper(<a href="https://arxiv.org/pdf/2101.02692.pdf" aria-label="src_2" style="color: black; text-decoration: underline;">source</a>)</figcaption>
-</figure>
-</div>
 
-    <span class="bolded">
-        - What does the paper do?
-    </span>
+    <div class="project">
+            <p class = "project_heading">
+                Where2Act: From Pixels to Actions for Articulated 3D Objects
+            </p>
+            <div class = "project_image">
+            <figure>
+                <img src="../images/where2act.png" alt = "Teaser image for where2act" width="500">
+                <figcaption>Teaser image for the paper(<a href="https://arxiv.org/pdf/2101.02692.pdf" aria-label="src_2" style="color: black; text-decoration: underline;">source</a>)</figcaption>
+            </figure>
+            </div>
+            <div class="paper_desc" id="proj2">
 
-<p class='bio_para'>
-The paper focuses around the idea of agent-environment interaction using visual perception. 
-We as humans are not only able to interact with objects like pulling a door, switching on, etc. 
-easily but also able to infer precisely how and where this interaction needs to take place.
- Taking motivation from this, given an image and its depth map, the authors predict a set of actions
- (like pulling, pulling-up, pulling-down, etc.) for each pixel, a gripper end-effector 
- 3-DoF orientation in SO(3) space(proposed action) and a probability of success of this action.       
-</p>
+                <span class="bolded">
+                    - What does the paper do?
+                </span>
 
-    <span class="bolded">
-    - How to they do it?
-    </span>
+                <p class='bio_para'>
+                The paper focuses around the idea of agent-environment interaction using visual perception. 
+                We as humans are not only able to interact with objects like pulling a door, switching on, etc. 
+                easily but also able to infer precisely how and where this interaction needs to take place.
+                Taking motivation from this, given an image and its depth map, the authors predict a set of actions
+                (like pulling, pulling-up, pulling-down, etc.) for each pixel, a gripper end-effector 
+                3-DoF orientation in SO(3) space(proposed action) and a probability of success of this action.       
+                </p>
 
-<p class='bio_para'>
-The input here is an RGB image or a point cloud. The authors then use either a ResNet-18(for image) or 
-Pointnet++(for Point Cloud) network to extract the per pixel feature from the input. These features 
-are then passed through three 128-layered MLPs to get the final outputs required for interaction i.e., 
-action per pixel, the proposed action the success of the action proposed. The final loss function is a
- scaled sum of losses from the three MLP-based models. \\* Getting data for such specific interactions 
- is difficult, so the authors use SAPIEN, a state-of-the-art physics-based simulation. Initially, the 
- authors sampled data offline and trained the model on it, but they found that this data is highly 
- imbalanced in terms of time for which interaction happens. To mitigate this, the authors propose an 
- online adaptive data sampling strategy. Here, the authors use the learnt model from offline sampled 
- data to find interactions that give successful results and sample more data in those regions. The 
- final experiments are done on fifteen object categories present in  in the PartNet-Mobility dataset. 
- Out of these, ten are used for training and rest 5 are used for testing. The authors use two 
- evaluations metrics. Firstly, they use F-score to predict the goodness of predicted actions. Secondly, 
- they define a ratio between the True Positive action proposals and the total number of proposals.
-</p>
+                <span class="bolded">
+                - How to they do it?
+                </span>
 
-<span class="bolded">
-    - Positive points of the paper
-</span>
+                <p class='bio_para'>
+                The input here is an RGB image or a point cloud. The authors then use either a ResNet-18(for image) or 
+                Pointnet++(for Point Cloud) network to extract the per pixel feature from the input. These features 
+                are then passed through three 128-layered MLPs to get the final outputs required for interaction i.e., 
+                action per pixel, the proposed action the success of the action proposed. The final loss function is a
+                scaled sum of losses from the three MLP-based models. \\* Getting data for such specific interactions 
+                is difficult, so the authors use SAPIEN, a state-of-the-art physics-based simulation. Initially, the 
+                authors sampled data offline and trained the model on it, but they found that this data is highly 
+                imbalanced in terms of time for which interaction happens. To mitigate this, the authors propose an 
+                online adaptive data sampling strategy. Here, the authors use the learnt model from offline sampled 
+                data to find interactions that give successful results and sample more data in those regions. The 
+                final experiments are done on fifteen object categories present in  in the PartNet-Mobility dataset. 
+                Out of these, ten are used for training and rest 5 are used for testing. The authors use two 
+                evaluations metrics. Firstly, they use F-score to predict the goodness of predicted actions. Secondly, 
+                they define a ratio between the True Positive action proposals and the total number of proposals.
+                </p>
 
-<p class='bio_para'>
-Given the complexity of the task, the solution provided by the authors just uses off-the-shelf 
-feature extractors and MLPs, which is elegant. It is also one of the first papers performing such 
-fine-grained level task. The experiments are performed robustly, the authors test their algorithm 
-on unseen test data and perform ablation studies to prove their claim. 
-</p>
+                <span class="bolded">
+                    - Positive points of the paper
+                </span>
 
-<span class="bolded">
-- Negative points of the paper
-</span>
+                <p class='bio_para'>
+                    Given the complexity of the task, the solution provided by the authors just uses off-the-shelf 
+                    feature extractors and MLPs, which is elegant. It is also one of the first papers performing such 
+                    fine-grained level task. The experiments are performed robustly, the authors test their algorithm 
+                    on unseen test data and perform ablation studies to prove their claim. 
+                </p>
 
-<p class='bio_para'>
-The authors represent the world in a very simplistic manner, which are just 6 actions. Usually, 
-the actions are a lot more complicated. Also, some actions might require pushing with one hand and 
-pulling with other hand(for eg. rotating a table on its axis), there current model architecture might 
-not be able to handle that. Also, though this is a huge step in terms of agent-environment interaction,
- but far from a real scene as the authors used a simulation-based
-</p>
-</div>
+                <span class="bolded">
+                    - Negative points of the paper
+                </span>
+
+                <p class='bio_para'>
+                    The authors represent the world in a very simplistic manner, which are just 6 actions. Usually, 
+                    the actions are a lot more complicated. Also, some actions might require pushing with one hand and 
+                    pulling with other hand(for eg. rotating a table on its axis), there current model architecture might 
+                    not be able to handle that. Also, though this is a huge step in terms of agent-environment interaction,
+                    but far from a real scene as the authors used a simulation-based
+                </p>
+            </div>
+            <button class= "read_more" id="more2">Read More..</button>
+    </div>
 <!-- ***************************************************************************************************************************************** -->
-<div class="project">
-<p class = "project_heading">
-    Learning Transferable Visual models using Natural Language Pretraining
-</p>
-<div class = "project_image">
-<figure>
-    <img src="../images/clip.png" alt = "CLIP model architecture" width="500">
-    <figcaption>CLIP model architecture(<a href="https://arxiv.org/pdf/2103.00020.pdf" aria-label="src_3" style="color: black; text-decoration: underline;">source</a>)</figcaption>
-</figure>
+    <div class="project">
+        <p class = "project_heading">
+            Learning Transferable Visual models using Natural Language Pretraining
+        </p>
+        <div class = "project_image">
+            <figure>
+                <img src="../images/clip.png" alt = "CLIP model architecture" width="500">
+                <figcaption>CLIP model architecture(<a href="https://arxiv.org/pdf/2103.00020.pdf" aria-label="src_3" style="color: black; text-decoration: underline;">source</a>)</figcaption>
+            </figure>
+        </div>
+        <div class="paper_desc" id="proj3">
+            <span class="bolded">
+                - What does the paper do?
+            </span>
+
+            <p class='bio_para'>
+                Computer vision systems are built through training and prediction on a very specific kind of 
+                dataset and consequently the task. Not only it is laborious to build these specific datasets for 
+                specific tasks but also it limits model's generality and usability. The paper aims at solving this 
+                problem by doing a simple pre-training task of predicting which captions goes with which image. 
+                This allows them to learn State-of-the-art image representations in a scalable and efficient way. 
+                The authors test this method by studying the performance of pre-trained model on 30 different existing
+                Computer Vision tasks.       
+            </p>
+
+            <span class="bolded">
+                - How to they do it?
+            </span>
+
+            <p class='bio_para'>
+                The paper derives its inspiration from two major ideas. First being a paper called VirTex and second 
+                is the idea of contrastive learning. During training, image-text pairs are used as a supervising 
+                signal. We take an image, pass it through an image encoder and project it on a linear sub space. 
+                Similarly, we take the corresponding text, pass it through a text encoder and project it on a linear 
+                sub space. Post this, the image and text linear subspaces are used to compute the Cosine similarity 
+                and the encoders are trained by contrastive loss. The authors here don't predict the exact caption of
+                the image, rather, they train using the similarity between the complete encoded text and an image.
+                The inference here is done in a zero shot setting. During inference, a textual prompt is engineered 
+                and the loss is computed between the encoded test image and the \textit{engineered prompt} to predict 
+                the final class of the image.
+            </p>
+
+            <span class="bolded">
+                - Positive points of the paper
+            </span>
+
+            <p class='bio_para'>
+                The paper introduces a simplistic yet elegant way of learning robust representations from a 
+                large scale dataset. The experiment across 30 different datasets along with zero shot transfer 
+                learning shows how transformers can learn representations across wide variety of tasks. The 
+                thoroughness of the experiments proves that this method is highly transferable and gives us 
+                representations that can handle distribution shift better than ImageNet models.
+            </p>
+
+            <span class="bolded">
+                - Negative points of the paper
+            </span>
+
+            <p class='bio_para'>
+                Though CLIP model gives us a way to train models in a datad ab task agnostic manner, but it 
+                comes with a cost of a huge data requirement for pretraining task. The authors in the paper use 
+                400 million images. The image encoders(ResNet like) takes took 18 days to train on 592 V100 GPUs 
+                while the largest Vision Transformer took 12 days on 256 V100 GPUs. This is an enormous cost for 
+                nearly SOTA results. It would have been interesting to see how the models trained for reasonable 
+                time and dataset performs as that is something more accessible to an average researcher.
+            </p>
+        </div>
+        <button class= "read_more" id="more3">Read More..</button>
+
+    </div>
 </div>
-
-    <span class="bolded">
-        - What does the paper do?
-    </span>
-
-<p class='bio_para'>
-Computer vision systems are built through training and prediction on a very specific kind of 
-dataset and consequently the task. Not only it is laborious to build these specific datasets for 
-specific tasks but also it limits model's generality and usability. The paper aims at solving this 
-problem by doing a simple pre-training task of predicting which captions goes with which image. 
-This allows them to learn State-of-the-art image representations in a scalable and efficient way. 
-The authors test this method by studying the performance of pre-trained model on 30 different existing
- Computer Vision tasks.       
-</p>
-
-    <span class="bolded">
-    - How to they do it?
-    </span>
-
-<p class='bio_para'>
-The paper derives its inspiration from two major ideas. First being a paper called VirTex and second 
-is the idea of contrastive learning. During training, image-text pairs are used as a supervising 
-signal. We take an image, pass it through an image encoder and project it on a linear sub space. 
-Similarly, we take the corresponding text, pass it through a text encoder and project it on a linear 
-sub space. Post this, the image and text linear subspaces are used to compute the Cosine similarity 
-and the encoders are trained by contrastive loss. The authors here don't predict the exact caption of
-the image, rather, they train using the similarity between the complete encoded text and an image.
-The inference here is done in a zero shot setting. During inference, a textual prompt is engineered 
-and the loss is computed between the encoded test image and the \textit{engineered prompt} to predict 
-the final class of the image.
-</p>
-
-<span class="bolded">
-    - Positive points of the paper
-</span>
-
-<p class='bio_para'>
-The paper introduces a simplistic yet elegant way of learning robust representations from a 
-large scale dataset. The experiment across 30 different datasets along with zero shot transfer 
-learning shows how transformers can learn representations across wide variety of tasks. The 
-thoroughness of the experiments proves that this method is highly transferable and gives us 
-representations that can handle distribution shift better than ImageNet models.
-</p>
-
-<span class="bolded">
-- Negative points of the paper
-</span>
-
-<p class='bio_para'>
-Though CLIP model gives us a way to train models in a datad ab task agnostic manner, but it 
-comes with a cost of a huge data requirement for pretraining task. The authors in the paper use 
-400 million images. The image encoders(ResNet like) takes took 18 days to train on 592 V100 GPUs 
-while the largest Vision Transformer took 12 days on 256 V100 GPUs. This is an enormous cost for 
-nearly SOTA results. It would have been interesting to see how the models trained for reasonable 
-time and dataset performs as that is something more accessible to an average researcher.
- </p>
- </div>
 <!-- ***************************************************************************************************************************************** -->
 
 <h1 class="div_heads">Books</h1>
-
+<div class="all_projects">
 <!-- ***************************************************************************************************************************************** -->
-<div class="project">
-<p class = "project_heading">
-    Sapiens: A Brief History of Humankind by Yuval Noah Harari
-</p>
-<div class = "project_image">
-<figure>
-    <img src="../images/sapiens.jpeg" alt = "book cover for sapiens: A Brief History of Humankind" width="500">
-    <figcaption>sapiens book</figcaption>
-</figure>
-</div>
-</div>
+    <div class="project">
+        <p class = "project_heading">
+            Sapiens: A Brief History of Humankind by Yuval Noah Harari
+        </p>
+        <div class = "project_image">
+            <figure>
+                <img src="../images/sapiens.jpeg" alt = "book cover for sapiens: A Brief History of Humankind" width="500">
+                <figcaption>sapiens book</figcaption>
+            </figure>
+        </div>
+    </div>
 <!-- ***************************************************************************************************************************************** -->
-<div class="project">
-<p class = "project_heading">
-    A Short History of Nearly Everything by Bill Bryson
-</p>
-<div class = "project_image">
-<figure>
-    <img src="../images/biref_history.jpeg" alt = "book cover for A Short History of Nearly Everything" width="500">
-    <figcaption>book cover</figcaption>
-</figure>
-</div>
-</div>
+    <div class="project">
+        <p class = "project_heading">
+            A Short History of Nearly Everything by Bill Bryson
+        </p>
+        <div class = "project_image">
+        <figure>
+            <img src="../images/biref_history.jpeg" alt = "book cover for A Short History of Nearly Everything" width="500">
+            <figcaption>book cover</figcaption>
+        </figure>
+        </div>
+    </div>
 <!-- ***************************************************************************************************************************************** -->
-<div class="project">
-<p class = "project_heading">
-    Animal Farm by George Orwell
-</p>
-<div class = "project_image">
-<figure>
-    <img src="../images/animal_farm.jpeg" alt = "book cover for Animal farm" width="500">
-    <figcaption>book cover</figcaption>
-</figure>
-</div>
-</div>
+    <div class="project">
+        <p class = "project_heading">
+            Animal Farm by George Orwell
+        </p>
+        <div class = "project_image">
+        <figure>
+            <img src="../images/animal_farm.jpeg" alt = "book cover for Animal farm" width="500">
+            <figcaption>book cover</figcaption>
+        </figure>
+        </div>
+    </div>
 <!-- ***************************************************************************************************************************************** -->
-<div class="project">
-<p class = "project_heading">
-    1984 by George Orwell
-</p>
-<div class = "project_image">
-<figure>
-    <img src="../images/1984.jpeg" alt = "book cover for 1984" width="500">
-    <figcaption>book cover</figcaption>
-</figure>
-</div>
-</div>
+    <div class="project">
+        <p class = "project_heading">
+            1984 by George Orwell
+        </p>
+        <div class = "project_image">
+        <figure>
+            <img src="../images/1984.jpeg" alt = "book cover for 1984" width="500">
+            <figcaption>book cover</figcaption>
+        </figure>
+        </div>
+    </div>
 <!-- ***************************************************************************************************************************************** -->
-<div class="project">
-<p class = "project_heading">
-    Quiet by Susan Cain
-</p>
-<div class = "project_image">
-<figure>
-    <img src="../images/quiet.jpeg" alt = "Book cover for Quiet" width="500">
-    <figcaption>book cover</figcaption>
-</figure>
-</div>
-</div>
+    <div class="project">
+        <p class = "project_heading">
+            Quiet by Susan Cain
+        </p>
+        <div class = "project_image">
+        <figure>
+            <img src="../images/quiet.jpeg" alt = "Book cover for Quiet" width="500">
+            <figcaption>book cover</figcaption>
+        </figure>
+        </div>
+    </div>
 <!-- ********************************************************************************************* -->
-<div class="project">
-<p class = "project_heading">
-    Emotional Intelligence by Daniel Goleman
-</p>
-<div class = "project_image">
-<figure>
-    <img src="../images/emotional_intelligence.jpeg" alt = "Book cover for Emotional Intelligence" width="500">
-    <figcaption>book cover</figcaption>
-</figure>
-</div>
+    <div class="project">
+        <p class = "project_heading">
+            Emotional Intelligence by Daniel Goleman
+        </p>
+        <div class = "project_image">
+        <figure>
+            <img src="../images/emotional_intelligence.jpeg" alt = "Book cover for Emotional Intelligence" width="500">
+            <figcaption>book cover</figcaption>
+        </figure>
+        </div>
+    </div>
+
 </div>
 <div class="move_to_top">
     <a class = "skip-to-content-link" href="#header" style="text-decoration: none;"> 
@@ -312,6 +325,7 @@ time and dataset performs as that is something more accessible to an average res
     
     </a>
     </div>
+    <script src="../js/main_file.js"></script>
     </main>
 	<footer id ="footer">
 		&copy; 2022

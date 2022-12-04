@@ -70,6 +70,31 @@ nav li{
 header{
 	text-align: center;
 }
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  left: -500px;
+  top: -40px;
+  
+}
+
+.skip a:focus{
+  background: white;
+  top: 0;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+	width: 20%;
+	height: 20px;
+}
 /* *********************************************************************************************** */
 /* ************************************* Main page settings************************************** */
 .index_body{
@@ -159,7 +184,7 @@ form textarea{
 	
 	
 }
-button{
+.contact_button{
 	background-color: #8c3434;
 	border-radius: 15px;
 	color: whitesmoke;
@@ -199,7 +224,7 @@ button{
 
 /* *********************************************************************************************** */
 /* ************************************* Project/Gallery page settings**************************** */
-.industry_projects{
+.all_projects{
 	display: flex;
 	flex-direction: column;
 }
@@ -254,10 +279,12 @@ position: relative;
 	background-color: #8c3434;
 	color: white;
 	font-size: 21pt;
+	text-align: center;
+	height: 20vh;
 
 }
 .project_desc{
-	/* font-family: Arial, Helvetica, sans-serif; */
+	
 	font-family: 'Roboto', sans-serif;
 	font-size: 16pt;
 	text-align: justify;
@@ -276,7 +303,7 @@ position: relative;
 	width: 25%;
 	padding-left: 1%;
 	padding-right: 1%;
-	height: 35px;
+	height: 50px;
 	text-align: center;
 	border-radius: 8px;
 	
@@ -290,6 +317,11 @@ position: relative;
 	font-size: 18px;
 	font-weight:bold;
 
+}
+.read_more{
+	background-color: aliceblue;
+	color: #8c3434;
+	border: None;
 }
 /* *********************************************************************************************** */
 /* ************************************* Blog page settings*************************************** */
@@ -371,6 +403,10 @@ position: relative;
 }
 /* *********************************************************************************************** */
 /* ************************************* Media queries settings*********************************** */
+
+.project_desc{ display: none; }
+.paper_desc{display: none;}
+
 @media all and (min-width: 600px){
 	nav li{
 		background-color: #8c3434;
@@ -379,9 +415,19 @@ position: relative;
 		display:inline-block;
 		width: 20.16%;
 	}	
+	.move_to_top{
+		height:40px;
+	}
+	.project_heading{
+		height:50px;
+	}
+	.project_desc{ display: inline; }
+	.read_more{display: none;}
 
 }
 @media all and (min-width: 900px){
+	.project_desc{ display: inline; }
+	.read_more{display: none;}
 	nav li{
 		background-color: #8c3434;
 		padding:10px;
@@ -409,10 +455,15 @@ position: relative;
 		font-size: 25px;
 	
 	}
+	.project_heading{
+		height: 50px;
+	}
 
 }
 
 @media all and (min-width: 3200px){
+	.project_desc{ display: inline; }
+	.read_more{display: none;}
 	nav li{
 		background-color: #8c3434;
 		padding:10px;
@@ -420,28 +471,23 @@ position: relative;
 		display:inline-block;
 		width: 20.16%;
 	}	
-	.industry_projects{
+	.all_projects{
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
-	/* .project{
+	.project{
 		min-height: 300px;
 		height: auto;
-		width: 100rem;
+		width: 30vw;
 		align-content: center;
 		border: black 1px solid;
 		margin-top: 40px;
 		font-family: 'Roboto', sans-serif;
-	} */
-	.project_heading{
-		font-family: Georgia, 'Times New Roman', Times, serif;
-		background-color: #8c3434;
-		color: white;
-		font-size: 21pt;
-		width: 100%;
-	
+		margin-right: 0;
 	}
+
+
 	.move_to_top{
 		margin-top: 90px;
 		margin-left: auto;
