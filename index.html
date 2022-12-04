@@ -2,6 +2,16 @@
 <html lang="en">
 <!-- All of the meta data for the page belongs in the header tag -->
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-44LXEL1RGG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-44LXEL1RGG');
+    </script>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/bio-photo.jpg">
@@ -76,7 +86,22 @@
                     </li>
                 </ul> 
             </div>
+            <div class="contact_me">
+                <h2> Feel free to contact me at:</h2>
 
+                <form action="https://formspree.io/f/mnqreagr" method="POST">
+                    <label>
+                        Your email:
+                        <input type="email" name="email">
+                    </label>
+                    <label class="message">
+                        Your message:
+                        <textarea name="message"></textarea>
+                    </label>
+                    <!-- your other form fields go here -->
+                    <button type="submit">Send</button>
+                </form>
+            </div>
 
 		
 	</main>

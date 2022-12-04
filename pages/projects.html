@@ -39,31 +39,31 @@
          <div class="project">
             <p class = "project_heading">
                Pavement Digital asset management using Deep Learning at Atkins
-         </p>
-         <div class = "project_image">
-            <figure>
-               <img src="../images/pavement_defect_results.png" alt = "pavement-defect-results" width="500">
-               <figcaption>Image with Linear defects</figcaption>
-            </figure>
-         </div>
+            </p>
+            <div class = "project_image">
+               <figure>
+                  <img src="../images/pavement_defect_results.png" alt = "pavement-defect-results" width="500">
+                  <figcaption>Image with Linear defects</figcaption>
+               </figure>
+            </div>
 
-         <p class="project_desc">
-            Here, the target was to detect and recognize the type and severity of defect on top-view 
-            roadimages. For transforming input data to make it deep learning training ready, GDAL 
-            and shapely was used. The final solution consisted of classification of an input image 
-            into asphalt/concreteusing a ResNet-18(accuracy 88%) model followed by the detection and 
-            classification of type andseverity of the defects. For Asphalt, I used Mask-RCNN(accuracy 77%) 
-            to detect and classify thedefect type which was then input to a classification (ResNet-50 
-            accuracy 94%) network giving theseverity(low, medium, high) of cropped defective sections. 
-            For Concrete, I trained three end-to-end models for Joints, corner and center defects type 
-            and severity of that gave an accuracy ofabout 85% each. Each model used InceptionV3 as a 
-            feature extractor followed by fully connectedlayers giving type, location and severity of the 
-            defects. Apart from the core computer visionsolution, I also worked on post processing the 
-            distress information so that it can be used in anAtkins proprietary tool. The final outputs
-            were in the form of shapefiles which can be visualized inQGIS for analysis of pavements and 
-            decision making on them. This was awarded with Excellenceaward. (SE): keras, tensorflow, 
-            fastai GDAL, shapely, OpenCV, scikit-image, AWS
-         </p>
+            <p class="project_desc">
+               Here, the target was to detect and recognize the type and severity of defect on top-view 
+               roadimages. For transforming input data to make it deep learning training ready, GDAL 
+               and shapely was used. The final solution consisted of classification of an input image 
+               into asphalt/concreteusing a ResNet-18(accuracy 88%) model followed by the detection and 
+               classification of type andseverity of the defects. For Asphalt, I used Mask-RCNN(accuracy 77%) 
+               to detect and classify thedefect type which was then input to a classification (ResNet-50 
+               accuracy 94%) network giving theseverity(low, medium, high) of cropped defective sections. 
+               For Concrete, I trained three end-to-end models for Joints, corner and center defects type 
+               and severity of that gave an accuracy ofabout 85% each. Each model used InceptionV3 as a 
+               feature extractor followed by fully connectedlayers giving type, location and severity of the 
+               defects. Apart from the core computer visionsolution, I also worked on post processing the 
+               distress information so that it can be used in anAtkins proprietary tool. The final outputs
+               were in the form of shapefiles which can be visualized inQGIS for analysis of pavements and 
+               decision making on them. This was awarded with Excellenceaward. (SE): keras, tensorflow, 
+               fastai GDAL, shapely, OpenCV, scikit-image, AWS
+            </p>
          </div>
          <div class = "project">
             <p class="project_heading">
