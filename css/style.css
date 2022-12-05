@@ -3,8 +3,9 @@ body{
 	margin:1%;
 	padding:1%;
 	font-size:150%;
-	background-color: aliceblue;
+	background-color: rgb(240, 248, 255);
 	font-family: 'Roboto', sans-serif;
+	
 }
 h1{
 	font-size: 2em; 
@@ -62,6 +63,7 @@ nav li{
 	border:1px solid black;
 	display: list-item;
 	width: 100%;
+	font-weight: bold;
 }
 .bolded { font-weight: bold; }
 .italics{font-style: italic;
@@ -71,7 +73,7 @@ header{
 	text-align: center;
 }
 .skip a{
-  background: white;
+  background: black;
   left: 0;
   padding: 6px;
   -webkit-transition: top 1s ease-out;
@@ -84,7 +86,7 @@ header{
 }
 
 .skip a:focus{
-  background: white;
+  background: black;
   top: 0;
   left: 0;
   padding: 6px;
