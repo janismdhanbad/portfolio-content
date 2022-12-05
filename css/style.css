@@ -133,6 +133,12 @@ header{
 	grid-row: 1 / span 2;
 	grid-column: 2 / span 1;
 }
+aside{
+	grid-row: 1 / span 2;
+	grid-column: 3 / span 1;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-style: italic;
+}
 .social_info{
 	grid-row: 3 / span 1;
 	grid-column: 2 / span 1;
@@ -323,6 +329,31 @@ position: relative;
 	color: #8c3434;
 	border: None;
 }
+
+/* *********************************************************************************************** */
+/* ************************************* Blog page displaysettings*************************************** */
+
+
+.body_blog_display{
+	display: grid;
+	grid-template-columns: 1fr;
+	background-image: url("../images/IMG-7375.jpg");
+	width: 100%;
+	background-size: cover;
+	
+
+}
+.body_blog_display > header{
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+}
+.body_blog_display > main{
+	grid-column: 1 / -1;
+}
+.body_blog_display > footer{
+	grid-column: 1 / -1;
+
+}
 /* *********************************************************************************************** */
 /* ************************************* Blog page settings*************************************** */
 
@@ -330,7 +361,7 @@ position: relative;
 .body_blog{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: ;
+
 }
 .body_blog > header{
 	grid-column: 1 / -1;
