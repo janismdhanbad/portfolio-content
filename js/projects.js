@@ -1,4 +1,3 @@
-
 document.getElementById("more1").addEventListener("click", showProj1);
 
 var el1 = document.getElementById("more1")
@@ -7,13 +6,16 @@ function showProj1() {
         document.getElementById("more1").innerText = "Read Less..";
         document.getElementById("proj1").style.display = "inline";
     }
-    else{
+    else if ((el1.innerText == "Read Less..")){
         document.getElementById("more1").innerText = "Read More..";
         document.getElementById("proj1").style.display = "none";
     }
+    else{
+        console.log("its here!!")
+        document.getElementById("proj1").style.display = "inline";
+    }
     
   }
-
 
 document.getElementById("more2").addEventListener("click", showProj2);
 
@@ -23,9 +25,12 @@ function showProj2() {
         document.getElementById("more2").innerText = "Read Less..";
         document.getElementById("proj2").style.display = "inline";
     }
-    else{
+    else if ((el2.innerText == "Read Less..")){
         document.getElementById("more2").innerText = "Read More..";
         document.getElementById("proj2").style.display = "none";
+    }
+    else{
+        document.getElementById("proj4").style.display = "inline";
     }
     
 }
@@ -40,9 +45,12 @@ function showProj3() {
         document.getElementById("more3").innerText = "Read Less..";
         document.getElementById("proj3").style.display = "inline";
     }
-    else{
+    else if ((el3.innerText == "Read Less..")){
         document.getElementById("more3").innerText = "Read More..";
         document.getElementById("proj3").style.display = "none";
+    }
+    else{
+        document.getElementById("proj3").style.display = "inline";
     }
     
     }
@@ -56,28 +64,16 @@ function showProj4() {
         document.getElementById("more4").innerText = "Read Less..";
         document.getElementById("proj4").style.display = "inline";
     }
-    else{
+    else if ((el4.innerText == "Read Less..")){
         document.getElementById("more4").innerText = "Read More..";
         document.getElementById("proj4").style.display = "none";
     }
+    else{
+        document.getElementById("proj4").style.display = "inline";
+    }
     
 }
-    
-// document.getElementById("things_miss").addEventListener("click", DisplayBlog1);
-// function ChangeSRC(pg_to_dipl){
-//     let change = document.getElementById("displ_blog");
-//     change.innerHTML= pg_to_dipl ;
-//     console.log(pg_to_dipl)
-// }
 
-// function DisplayBlog1(){
-//     // displ_blog.src="../blogs_md/things_miss.md"
-//     // 
-//     // displ_blog.innerHTML = "It is here";
-//     // console.log("its here!!")
-//     window.location = "../pages/blogs_display.html";
-//     window.onload = ChangeSRC( "things_miss");
-//     console.log("its here!!")
 
-   
-// }
+
+

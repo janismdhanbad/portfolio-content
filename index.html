@@ -4,12 +4,12 @@
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWM4DVJLW0"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-PWM4DVJLW0');
+        gtag('config', 'G-PWM4DVJLW0');
     </script>
 
 	<meta charset="UTF-8">
@@ -28,6 +28,7 @@
 <body class="index_body">
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
+
         <nav>
             <ul>
                 <li class="active"><a href="index.html">Home</a></li>
@@ -36,10 +37,22 @@
                 <li><a href="./pages/readings.html">My Reads</a></li>
             </ul>
         </nav>
+        <div class="mode_changer">
+            <p id="mode_changer_text"> Dark Mode </p>
+            <label class="switch">
+                <label for="mmq"> .</label>
+                <input type="checkbox" id = "mmq">
+                
+                <span class="slider round" id="mode_changer"></span>
+            </label>
+        </div>
+        <h1 class="div_heads"> Bio </h1>
     </header>
-
+    
 	<main class="profile_container" id="main">
-
+            <!-- <h1 class="div_heads">
+         Industry Projects
+      </h1> -->
         
             <div class = "profile_img">
                 <img alt="profile picture" src="./images/final_bio_photo.gif" id="img1">
@@ -79,7 +92,7 @@
             </div>
             
             <div class="publications">
-                <h2>
+                <h2 ">
                     Publications
                 </h2>
 
@@ -113,10 +126,11 @@
 		
 	</main>
     
-    <script src="js/main_file.js"></script>
+    
 	<footer id ="footer">
 		&copy; 2022
 	</footer>
-
+    <script src="js/index.js"></script>
 </body>
+
 </html>
