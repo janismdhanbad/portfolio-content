@@ -505,6 +505,15 @@ position: relative;
 	grid-column: 1 / -1;
 
 }
+#books{
+	display: flex;
+	flex-direction: column;
+}
+#papers{
+	display: flex;
+	flex-direction: column;
+
+}
 /* *********************************************************************************************** */
 /* ************************************* Media queries settings*********************************** */
 
@@ -513,11 +522,11 @@ position: relative;
 /* tablet */
 @media all and (min-width: 800px){
 	
+	.project_desc{ display: inline; }
+	.read_more{display: none;}
+	.paper_desc{display: inline;}
 	
 	nav li{
-		background-color: #8c3434;
-		padding:10px;
-		border:1px solid black;
 		display:inline-block;
 		width: 20.16%;
 	}	
@@ -527,23 +536,13 @@ position: relative;
 	.project_heading{
 		height:50px;
 	}
-	.project_desc{ display: inline; }
-	.read_more{display: none;}
-	.paper_desc{display: inline;}
+
 	#books{
-		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 	#books .project{
-		min-height: 300px;
-		height: auto;
 		width: 30%;
-		align-content: center;
-		border: black 1px solid;
-		margin-top: 40px;
-		font-family: 'Roboto', sans-serif;
-		margin-right: 0;
 	}
 	#books .project_heading{
 		height:70px;
@@ -552,52 +551,19 @@ position: relative;
 }
 
 @media all and (min-width: 2000px){
-	.paper_desc{display: inline;}
-	.project_desc{ display: inline; }
-	.read_more{display: none;}
-	nav li{
-		background-color: #8c3434;
-		padding:10px;
-		border:1px solid black;
-		display:inline-block;
-		width: 20.16%;
-	}	
-	.all_projects{
-		display: flex;
+	#papers{
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
-	.project{
-		min-height: 300px;
-		height: auto;
+	#papers .project{
 		width: 30vw;
-		align-content: center;
-		border: black 1px solid;
-		margin-top: 40px;
-		font-family: 'Roboto', sans-serif;
-		margin-right: 0;
 	}
-
-
 	.move_to_top{
-		margin-top: 90px;
-		margin-left: auto;
-		margin-right: auto;
-		position: relative;
-		background-color: #8c3434;
 		width: 15%;
-		padding-left: 1%;
-		padding-right: 1%;
 		height: 45px;
-		text-align: center;
-		border-radius: 8px;
-		
 	}	
 	.move_to_top a{
-		color: white;
-		align-content: center;
 		font-size: 40px;
-	
 	}
 }
 @media (prefers-reduced-motion) {
