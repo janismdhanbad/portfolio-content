@@ -408,9 +408,9 @@ position: relative;
 .body_blog_display{
 	display: grid;
 	grid-template-columns: 1fr;
-	background-image: url("../images/IMG-7375.jpg");
-	width: 100%;
-	background-size: cover;
+	/* background-image: url("../images/IMG-7375.jpg"); */
+	/* width: 100%; */
+	/* background-size: cover; */
 	
 
 }
