@@ -510,8 +510,8 @@ position: relative;
 
 .project_desc{ display: none; }
 .paper_desc{display: none;}
-
-@media all and (min-width: 600px){
+/* tablet */
+@media all and (min-width: 800px){
 	
 	
 	nav li{
@@ -530,46 +530,28 @@ position: relative;
 	.project_desc{ display: inline; }
 	.read_more{display: none;}
 	.paper_desc{display: inline;}
-
-}
-@media all and (min-width: 900px){
-	.paper_desc{display: inline;}
-	.project_desc{ display: inline; }
-	.read_more{display: none;}
-	nav li{
-		background-color: #8c3434;
-		padding:10px;
-		border:1px solid black;
-		display:inline-block;
-		width: 20.16%;
-	}	
-	.move_to_top{
-		margin-top: 90px;
-		margin-left: auto;
-		margin-right: auto;
-		position: relative;
-		background-color: #8c3434;
-		width: 15%;
-		padding-left: 1%;
-		padding-right: 1%;
-		height: 50px;
-		text-align: center;
-		border-radius: 8px;
-		
+	#books{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
-	.move_to_top a{
-		color: white;
+	#books .project{
+		min-height: 300px;
+		height: auto;
+		width: 30%;
 		align-content: center;
-		font-size: 25px;
-	
+		border: black 1px solid;
+		margin-top: 40px;
+		font-family: 'Roboto', sans-serif;
+		margin-right: 0;
 	}
-	.project_heading{
-		height: 50px;
+	#books .project_heading{
+		height:70px;
 	}
 
 }
 
-@media all and (min-width: 3200px){
+@media all and (min-width: 2000px){
 	.paper_desc{display: inline;}
 	.project_desc{ display: inline; }
 	.read_more{display: none;}
