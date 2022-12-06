@@ -514,6 +514,11 @@ position: relative;
 	flex-direction: column;
 
 }
+#projects_og{
+	display: flex;
+	flex-direction: column;
+
+}
 /* *********************************************************************************************** */
 /* ************************************* Media queries settings*********************************** */
 
@@ -525,7 +530,7 @@ position: relative;
 	.project_desc{ display: inline; }
 	.read_more{display: none;}
 	.paper_desc{display: inline;}
-	
+
 	nav li{
 		display:inline-block;
 		width: 20.16%;
@@ -555,8 +560,17 @@ position: relative;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
+	#projects_og{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	#projects_og .project{
+		width: 30vw;
+		padding: 10px;
+	}
 	#papers .project{
 		width: 30vw;
+		padding: 10px;
 	}
 	.move_to_top{
 		width: 15%;
